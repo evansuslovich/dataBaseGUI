@@ -19,6 +19,7 @@ public class dataBaseGUI extends JFrame{
     JButton submit = new JButton("Submit"); 
     
 
+    //change 
 
     public dataBaseGUI(){
         setSize(400,400); 
