@@ -30,6 +30,12 @@ public class dataBaseGUI extends JFrame implements ActionListener {
     JComboBox<String> daysBox = new JComboBox<>(days);
     JComboBox<String> yearsBox = new JComboBox<>(years);
 
+    private String monthMessage; 
+    private String dayMessage; 
+    private String yearMessage; 
+
+
+
     JLabel birthdayLabel = new JLabel("Enter your birthday");
 
     JButton submit = new JButton("Submit");
@@ -50,6 +56,7 @@ public class dataBaseGUI extends JFrame implements ActionListener {
         monthsBox.addActionListener(this); 
         daysBox.addActionListener(this); 
         yearsBox.addActionListener(this);
+        submit.addActionListener(this); 
         
         panel.setBackground(Color.orange); 
         panel.add(birthdayLabel); 
@@ -67,19 +74,24 @@ public class dataBaseGUI extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e){
 
         if(e.getSource() == monthsBox){
-            String monthMessage = (String)monthsBox.getSelectedItem(); 
-            System.out.println(monthMessage); 
+            monthMessage = (String)monthsBox.getSelectedItem(); 
+       }
+
+       if(e.getSource() == daysBox){
+           dayMessage = (String)daysBox.getSelectedItem(); 
+       }
+
+       if(e.getSource() == yearsBox){
+           yearMessage = (String)yearsBox.getSelectedItem(); 
+       }
+
+        if(e.getSource() == submit)
+        {
+            System.out.println("The Birthday is: " + monthMessage + " " +  dayMessage + ", " + yearMessage); 
+
         }
 
-        if(e.getSource() == daysBox){
-            String dayMessage = (String)daysBox.getSelectedItem(); 
-            System.out.println(dayMessage); 
-        }
 
-        if(e.getSource() == yearsBox){
-            String yearsMessage = (String)yearsBox.getSelectedItem(); 
-            System.out.println(yearsMessage); 
-        }
 
     }
     public static void main(String[] args) {
