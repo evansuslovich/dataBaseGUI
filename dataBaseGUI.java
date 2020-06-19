@@ -1,6 +1,7 @@
 import java.awt.*; 
 import java.awt.event.*; 
 
+
 import javax.swing.*; 
 
 public class dataBaseGUI extends JFrame implements ActionListener {
@@ -85,8 +86,7 @@ public class dataBaseGUI extends JFrame implements ActionListener {
 
         if(e.getSource() == submit)
         {
-            System.out.println("The Birthday is: " + monthMessage + " " +  dayMessage + ", " + yearMessage); 
-
+            JOptionPane.showMessageDialog(null, "The Birthday is: " + monthMessage + " " +  dayMessage + ", " + yearMessage);
         }
     }
 
