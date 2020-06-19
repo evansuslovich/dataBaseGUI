@@ -35,7 +35,6 @@ public class dataBaseGUI extends JFrame implements ActionListener {
     private String yearMessage; 
 
 
-
     JLabel birthdayLabel = new JLabel("Enter your birthday");
 
     JButton submit = new JButton("Submit");
@@ -43,7 +42,6 @@ public class dataBaseGUI extends JFrame implements ActionListener {
 
 
     public dataBaseGUI() {
-        setLayout(new FlowLayout());
         setSize(800,100); 
         setTitle("JComboBox"); 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -59,6 +57,7 @@ public class dataBaseGUI extends JFrame implements ActionListener {
         submit.addActionListener(this); 
         
         panel.setBackground(Color.orange); 
+        panel.setLayout(new FlowLayout()); 
         panel.add(birthdayLabel); 
         panel. add(monthsBox); 
         panel.add(daysBox); 
@@ -66,7 +65,6 @@ public class dataBaseGUI extends JFrame implements ActionListener {
         panel.add(submit); 
 
         add(panel); 
-
 
         setVisible(true); 
     }
@@ -90,9 +88,6 @@ public class dataBaseGUI extends JFrame implements ActionListener {
             System.out.println("The Birthday is: " + monthMessage + " " +  dayMessage + ", " + yearMessage); 
 
         }
-
-
-
     }
     public static void main(String[] args) {
         new dataBaseGUI(); 
