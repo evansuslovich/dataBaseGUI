@@ -26,21 +26,15 @@ public class architect extends JFrame{
         setLayout(new BorderLayout()); 
 
         add(introPanel, BorderLayout.NORTH); 
-
         setLayout(new FlowLayout()); 
 
 
 
-        image1 = new ImageIcon(getClass().getResource("treeOFFICIAL.png")); 
-        label1 = new JLabel(image1); 
-
-        
-
-        add(label1); 
+        //image1 = new ImageIcon(getClass().getResource("treeOFFICIAL.png")); 
+        //label1 = new JLabel(image1); 
+        //add(label1); 
     
-        
     
-
 
         setVisible(true); 
 
