@@ -1,15 +1,13 @@
 import javax.swing.*; 
 import java.awt.*; 
-import java.awt.event.*; 
 
 
-public class architect extends JFrame implements ActionListener{
+public class architect extends JFrame{
     private static final long serialVersionUID = 1L;
 
 
-    JPanel menu = new JPanel(); 
-    
-
+    JPanel introPanel = new JPanel();
+    JLabel introLabel = new JLabel("Welcome to the Tree Placer Game"); 
 
 
     public architect(){
@@ -17,6 +15,13 @@ public class architect extends JFrame implements ActionListener{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(800,800); 
 
+        introPanel.setBackground(Color.GREEN); 
+        introPanel.add(introLabel); 
+
+        setLayout(new BorderLayout()); 
+        add(introPanel, BorderLayout.NORTH); 
+
+       
 
 
         setVisible(true); 
@@ -26,7 +31,10 @@ public class architect extends JFrame implements ActionListener{
 
     }
 
+   
+
     public static void main(String[] args) {
+        new architect(); 
         
     }
 
