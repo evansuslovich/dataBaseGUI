@@ -10,6 +10,11 @@ public class architect extends JFrame{
     JLabel introLabel = new JLabel("Welcome to the Tree Placer Game"); 
 
 
+    private ImageIcon image1; 
+    private JLabel label1; 
+
+   
+
     public architect(){
         setTitle("Architect Game");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -19,14 +24,26 @@ public class architect extends JFrame{
         introPanel.add(introLabel); 
 
         setLayout(new BorderLayout()); 
+
         add(introPanel, BorderLayout.NORTH); 
 
-       
+        setLayout(new FlowLayout()); 
+
+
+
+        image1 = new ImageIcon(getClass().getResource("treeOFFICIAL.png")); 
+        label1 = new JLabel(image1); 
+
+        
+
+        add(label1); 
+    
+        
+    
 
 
         setVisible(true); 
 
-        // open new frames to design new things 
         // tree placer 
 
     }
