@@ -25,7 +25,11 @@ public class CircleListener extends JFrame{
 
         panel.setBackground(Color.YELLOW); 
 
-        getContentPane().add(panel).addMouseListener(new CircleClickListener()); 
+        CirclePanel panel = new CirclePanel(); 
+        setContentPane(panel); 
+        panel.addMouseListener(new CircleClickListener(panel));
+
+        //getContentPane().add(panel).addMouseListener(new CircleClickListener()); 
 
 
 
