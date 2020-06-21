@@ -14,8 +14,6 @@ public class TreeIcon {
         
     }
 
-   
-
     public int getX(){
         return x; 
     }
@@ -28,7 +26,6 @@ public class TreeIcon {
         ImageIcon i = new ImageIcon("treeOFFICIAL.png");
         image = i.getImage(); 
         
-
         g.drawImage(image, x, y, null);
 
     }
